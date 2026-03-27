@@ -9,10 +9,34 @@ Lista 0
 Questão 7) 
 Estime a complexidade do algoritmo de solução de sistemas lineares do pacote computacional de sua preferência: registre os tempos que o pacote levou para resolver sistemas aleatórios n × n, com n = 16, 32, 64, 128, 256, 512, 1024, 2048. Faça um gráfico do log do número de colunas contra o log dos tempos registrados. O algoritmo do pacote tem complexidade inferior a O(n3)?
 
+
+
+# Criando as matrizes
 ```{r}
+set.seed(14)
 
-2+2
+ns <- c(16, 32, 64, 128, 256, 512, 1024, 2048)
+tempos <- numeric(length(ns))
 
+for (k in seq_along(ns)) {
+  n <- ns[k]
+  A <- matrix(rnorm(n*n), n, n)
+  b <- rnorm(n)
+  
+  inicio <- Sys.time()
+  x <- solve(A, b)
+  fim <- Sys.time()
+  
+  tempos[k] <- as.numeric(fim - inicio)
+}
 
+plot(log(ns), log(tempos), type="b",
+     xlab="log(n)", ylab="log(tempo)",
+     main="Complexidade do solve")
+
+modelo <- lm(log(tempos) ~ log(ns))
+coef(modelo)
 ```
+
+
 

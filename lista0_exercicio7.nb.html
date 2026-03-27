@@ -1759,22 +1759,26 @@ que o pacote levou para resolver sistemas aleatórios n × n, com n = 16,
 32, 64, 128, 256, 512, 1024, 2048. Faça um gráfico do log do número de
 colunas contra o log dos tempos registrados. O algoritmo do pacote tem
 complexidade inferior a O(n3)?</p>
+<div id="criando-as-matrizes" class="section level1">
+<h1>Criando as matrizes</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVNaXN5WEc1Y2JtQmdZQ0o5IC0tPlxuXG5gYGByXG4yKzJcblxuYGBgXG5cbjwhLS0gcm5iLXNvdXJjZS1lbmQgLS0+XG4ifQ== -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuMisyXG5cbmBgYCJ9 -->
-<pre class="r"><code>2+2
+<!-- rnb-output-begin eyJkYXRhIjoiXG48IS0tIHJuYi1zb3VyY2UtYmVnaW4gZXlKa1lYUmhJam9pWUdCZ2NseHVZMjlsWmlodGIyUmxiRzhwWEc1Y2JtQmdZQ0o5IC0tPlxuXG5gYGByXG5jb2VmKG1vZGVsbylcblxuYGBgXG5cbjwhLS0gcm5iLXNvdXJjZS1lbmQgLS0+XG4ifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY29lZihtb2RlbG8pXG5cbmBgYCJ9 -->
+<pre class="r"><code>coef(modelo)
 </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
-<pre><code>[1] 4</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiKEludGVyY2VwdCkgICAgIGxvZyhucykgXG4gIC0xOC4wNjYwMiAgICAgMi4yNzk3MSBcbiJ9 -->
+<pre><code>(Intercept)     log(ns) 
+  -18.06602     2.27971 </code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQrDgWxnZWJyYSBMaW5lYXIgQXZhbsOnYWRhDQpMaXN0YSAwDQoNClF1ZXN0w6NvIDcpIA0KRXN0aW1lIGEgY29tcGxleGlkYWRlIGRvIGFsZ29yaXRtbyBkZSBzb2x1w6fDo28gZGUgc2lzdGVtYXMgbGluZWFyZXMgZG8gcGFjb3RlIGNvbXB1dGFjaW9uYWwgZGUgc3VhIHByZWZlcsOqbmNpYTogcmVnaXN0cmUgb3MgdGVtcG9zIHF1ZSBvIHBhY290ZSBsZXZvdSBwYXJhIHJlc29sdmVyIHNpc3RlbWFzIGFsZWF0w7NyaW9zIG4gw5cgbiwgY29tIG4gPSAxNiwgMzIsIDY0LCAxMjgsIDI1NiwgNTEyLCAxMDI0LCAyMDQ4LiBGYcOnYSB1bSBncsOhZmljbyBkbyBsb2cgZG8gbsO6bWVybyBkZSBjb2x1bmFzIGNvbnRyYSBvIGxvZyBkb3MgdGVtcG9zIHJlZ2lzdHJhZG9zLiBPIGFsZ29yaXRtbyBkbyBwYWNvdGUgdGVtIGNvbXBsZXhpZGFkZSBpbmZlcmlvciBhIE8objMpPw0KDQpgYGB7cn0NCg0KMisyDQoNCg0KYGBgDQoNCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlIgTm90ZWJvb2siDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQrDgWxnZWJyYSBMaW5lYXIgQXZhbsOnYWRhDQpMaXN0YSAwDQoNClF1ZXN0w6NvIDcpIA0KRXN0aW1lIGEgY29tcGxleGlkYWRlIGRvIGFsZ29yaXRtbyBkZSBzb2x1w6fDo28gZGUgc2lzdGVtYXMgbGluZWFyZXMgZG8gcGFjb3RlIGNvbXB1dGFjaW9uYWwgZGUgc3VhIHByZWZlcsOqbmNpYTogcmVnaXN0cmUgb3MgdGVtcG9zIHF1ZSBvIHBhY290ZSBsZXZvdSBwYXJhIHJlc29sdmVyIHNpc3RlbWFzIGFsZWF0w7NyaW9zIG4gw5cgbiwgY29tIG4gPSAxNiwgMzIsIDY0LCAxMjgsIDI1NiwgNTEyLCAxMDI0LCAyMDQ4LiBGYcOnYSB1bSBncsOhZmljbyBkbyBsb2cgZG8gbsO6bWVybyBkZSBjb2x1bmFzIGNvbnRyYSBvIGxvZyBkb3MgdGVtcG9zIHJlZ2lzdHJhZG9zLiBPIGFsZ29yaXRtbyBkbyBwYWNvdGUgdGVtIGNvbXBsZXhpZGFkZSBpbmZlcmlvciBhIE8objMpPw0KDQoNCg0KIyBDcmlhbmRvIGFzIG1hdHJpemVzDQpgYGB7cn0NCnNldC5zZWVkKDE0KQ0KDQpucyA8LSBjKDE2LCAzMiwgNjQsIDEyOCwgMjU2LCA1MTIsIDEwMjQsIDIwNDgpDQp0ZW1wb3MgPC0gbnVtZXJpYyhsZW5ndGgobnMpKQ0KDQpmb3IgKGsgaW4gc2VxX2Fsb25nKG5zKSkgew0KICBuIDwtIG5zW2tdDQogIEEgPC0gbWF0cml4KHJub3JtKG4qbiksIG4sIG4pDQogIGIgPC0gcm5vcm0obikNCiAgDQogIGluaWNpbyA8LSBTeXMudGltZSgpDQogIHggPC0gc29sdmUoQSwgYikNCiAgZmltIDwtIFN5cy50aW1lKCkNCiAgDQogIHRlbXBvc1trXSA8LSBhcy5udW1lcmljKGZpbSAtIGluaWNpbykNCn0NCg0KcGxvdChsb2cobnMpLCBsb2codGVtcG9zKSwgdHlwZT0iYiIsDQogICAgIHhsYWI9ImxvZyhuKSIsIHlsYWI9ImxvZyh0ZW1wbykiLA0KICAgICBtYWluPSJDb21wbGV4aWRhZGUgZG8gc29sdmUiKQ0KDQptb2RlbG8gPC0gbG0obG9nKHRlbXBvcykgfiBsb2cobnMpKQ0KY29lZihtb2RlbG8pDQpgYGANCg0KDQoNCg==</div>
 
 
 
